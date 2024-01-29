@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="Yasin Erdinç, berber, kaaracabey berber, berberr">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Yasin Erdinç</title>
+    <link rel="stylesheet" href="./style.css" />
+    
+  </head>
+  <body>
+    <!--! header section start  -->
+    <header class="header">
+      <a href="#" class="logo">
+        <img src="images/logo.png" alt="logo" />
+      </a>
+      <nav class="navbar">
+        <a href="../index.html">Anasayfa</a>
+        <a href="../about.html">Hakkımızda</a>
+        <a href="../menu.html">İşlemler</a>
+        <a href="../review.html">Yorumlar</a>
+        <a href="wordle/wordle.html"  class="active">Wordle</a>
+        <a href="../contact.html">İletişim</a>
+      </nav>
+
+      <div class="buttons">
+        <button id="search-btn">
+          <i class="fas fa-search"></i>
+        </button>
+        
+        </button>
+        <button id="menu-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+
+      <div class="search-form">
+        <input
+          type="text"
+          class="search-input"
+          id="search-box"
+          placeholder="search here"
+        />
+        <i class="fas fa-search"></i>
+      </div>
+
+      
+    </header>
+    <!--! header section end  -->
+
+    
+    <!--! Wordle Game Start  -->
+    <section class="about" id="about">
+      <h1 class="heading"><span>Wordle Game</span></h1>
+      <div id="checkBoxContainer">
+        <p>Tahmin Giriniz:</p>
+        <input id="checkBox" type="text" value="">
+        <br><br>
+        <button onclick=check()>Kontrol Et</button>
+      </div>
+      <br><br>
+      <div id="game">
+        <div id="game-board">
+          <div id="board-container">
+              <div id="board">
+                  <div class="word">
+                      <div id="11" class="letter-box"></div>
+                      <div id="12" class="letter-box"></div>
+                      <div id="13" class="letter-box"></div>
+                      <div id="14" class="letter-box"></div>
+                      <div id="15" class="letter-box"></div>
+                  </div>
+                  <div class="word">
+                      <div id="21" class="letter-box"></div>
+                      <div id="22" class="letter-box"></div>
+                      <div id="23" class="letter-box"></div>
+                      <div id="24" class="letter-box"></div>
+                      <div id="25" class="letter-box"></div>
+                  </div>
+                  <div class="word">
+                      <div id="31" class="letter-box"></div>
+                      <div id="32" class="letter-box"></div>
+                      <div id="33" class="letter-box"></div>
+                      <div id="34" class="letter-box"></div>
+                      <div id="35" class="letter-box"></div>
+                  </div>
+                  <div class="word">
+                      <div id="41" class="letter-box"></div>
+                      <div id="42" class="letter-box"></div>
+                      <div id="43" class="letter-box"></div>
+                      <div id="44" class="letter-box"></div>
+                      <div id="45" class="letter-box"></div>
+                  </div>
+                  <div class="word">
+                      <div id="51" class="letter-box"></div>
+                      <div id="52" class="letter-box"></div>
+                      <div id="53" class="letter-box"></div>
+                      <div id="54" class="letter-box"></div>
+                      <div id="55" class="letter-box"></div>
+                  </div>
+                  <div class="word">
+                      <div id="61" class="letter-box"></div>
+                      <div id="62" class="letter-box"></div>
+                      <div id="63" class="letter-box"></div>
+                      <div id="64" class="letter-box"></div>
+                      <div id="65" class="letter-box"></div>
+                  </div>
+  
+              </div>
+          </div>
+          <div id="sonuç"></div>
+          <div id="keyboard-container">
+              <div id="keyboard">
+                  <div class="row">
+                      <button id="Q">Q</button>
+                      <button id="W">W</button>
+                      <button id="E">E</button>
+                      <button id="R">R</button>
+                      <button id="T">T</button>
+                      <button id="Y">Y</button>
+                      <button id="U">U</button>
+                      <button id="I">I</button>
+                      <button id="O">O</button>
+                      <button id="P">P</button>
+                      <button id="Ğ">Ğ</button>
+                      <button id="Ü">Ü</button>
+                  </div>
+                  <div class="row">
+                      <button id="A">A</button>
+                      <button id="S">S</button>
+                      <button id="D">D</button>
+                      <button id="F">F</button>
+                      <button id="G">G</button>
+                      <button id="H">H</button>
+                      <button id="J">j</button>
+                      <button id="K">K</button>
+                      <button id="L">L</button>
+                      <button id="Ş">Ş</button>
+                      
+                  </div>
+                  <div class="row">
+                    <button>İ</button>
+                      <button id="Z">Z</button>
+                      <button id="X">X</button>
+                      <button id="C">C</button>
+                      <button id="V">V</button>
+                      <button id="B">B</button>
+                      <button id="N">N</button>
+                      <button id="M">M</button>
+                      <button id="Ö">Ö</button>
+                      <button id="Ç">Ç</button>
+                      
+                  </div>
+              </div>
+          </div>
+      </div>
+      
+    </section>
+    <!--! Wordle Game End  -->
+
+   
+
+    <!--! footer section start  -->
+    <section class="footer">
+      <div class="search">
+        <input type="text" class="search-input" placeholder="Search" />
+        <button class="btn btn-primary">Ara</button>
+      </div>
+      <div class="share">
+        <a href="#" class="fab fa-facebook"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="https://www.instagram.com/yasin__erdinc/" class="fab fa-instagram"></a>
+        <a href="#" class="fab fa-linkedin"></a>
+        <a href="#" class="fab fa-pinterest"></a>
+      </div>
+
+      <div class="links">
+          <a href="../index.html">Anasayfa</a>
+          <a href="../about.html">Hakkımızda</a>
+          <a href="../menu.html">İşlemler</a>
+          <a href="../review.html">Yorumlar</a>
+          <a href="wordle/wordle.html"  class="active">Wordle</a>
+          <a href="../contact.html">İletişim</a>
+      </div>
+
+      <div class="credit">
+        created by <span>Yusuf Turan</span> | all rigths reserved
+      </div>
+    </section>
+    <!--! footer section end  -->
+    
+    <script src="app.js"></script>
+    
+  </body>
+</html>
